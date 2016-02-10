@@ -1,0 +1,32 @@
+#block-nognom-local-tasks ul{
+  border-bottom: 1px solid #999;
+  list-style-type: none;
+  line-height: 0;
+  margin: 0;
+  padding: 3px 0;
+}
+#block-nognom-local-tasks ul li{
+  display: inline;
+}
+#block-nognom-local-tasks ul li a{
+  background: #999;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #999;
+  border-bottom: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 16px;
+  margin:3px;
+  padding: 3px 12px;
+  -webkit-transition:.5s;
+  transition: .5s;
+}
+#block-nognom-local-tasks ul li a:hover{
+  color: #000;
+  background: #fff;
+  padding: 5px 12px 3px 12px;
+}
+#block-nognom-local-tasks ul li a.is-active{
+  background: #fff;
+}
+

@@ -1,0 +1,21 @@
+name: Nognom
+type: theme
+description: 'A prototype responsive theme'
+package: Other
+core: 8.x
+libraries:
+  - nognom/global-styling
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_second: 'Sidebar Right'
+  footer: 'Footer'
+
+base theme:

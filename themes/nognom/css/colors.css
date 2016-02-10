@@ -1,0 +1,120 @@
+/* ---------- Color Module Styles ----------- */
+
+body {
+  color: #3b3b3b;
+  background: #292929;
+}
+#page,
+#main-wrapper,
+.region-primary-menu .menu-item a.is-active,
+.region-primary-menu .menu-item--active-trail a {
+  background: #ffffff;
+}
+.tabs ul.primary li a.is-active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.is-active a {
+  background-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+#header{
+  background-color: #055a8e;
+  background-image: -webkit-linear-gradient(top, #055a8e 0%, #1d84c3 100%);
+  background-image: linear-gradient(to bottom, #055a8e 0%, #1d84c3 100%);
+  color:#fffeff;
+}
+#sidebar-second h1,
+#sidebar-second h2,
+#sidebar-second h3,
+#sidebar-second h4,
+#sidebar-second h5{
+  background-color: #055a8e;
+  color:#fffeff;
+}
+a,
+.link {
+  border-color: #0071b3;
+  color: #0071b3;
+
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  border-color: #018fe2;
+  color: #018fe2;
+}
+a:active,
+.link:active {
+  color: #23aeff;
+}
+#header a,
+#header nav a{
+  color:#fffeff;
+}
+header nav
+#header nav li a{
+  border-color: #f9f9f9;
+}
+#header nav li a.is-active{
+  border-color:#f9f9f9;
+  background-color: #f6f6f2;
+  color: #3b3b3b;
+}
+#sidebar-second {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+#footer-wrapper {
+  background: #292929;
+  color:#999999;
+}
+.region-header,
+.region-header a,
+.region-header li a.is-active,
+.site-branding__text,
+.site-branding,
+.site-branding__text a,
+.site-branding a,
+.region-secondary-menu .menu-item a,
+.region-secondary-menu .menu-item a.is-active {
+  color: #fffeff;
+}
+
+/* ---------- Color Form ----------- */
+
+[dir="rtl"] .color-form .color-palette {
+  margin-left: 0;
+  margin-right: 20px;
+}
+[dir="rtl"] .color-form .form-item label {
+  float: right;
+}
+[dir="rtl"] .color-form .color-palette .lock {
+  right: -20px;
+  left: 0;
+}
+
+
+@media only screen and (max-width:430px) {
+  #sidebar-second {
+    background-color: #fff;
+    border: none;
+  }
+  .pane-slideOut-tab-title {
+    background-color: #055a8e;
+  }
+  .columns-slideOut .columns-slideOut-open-btn {
+    border-right: 5px solid #055a8e;
+  }
+  #sidebar-second.columns-slideOut.columns-slideOut-open {
+    background: #ffffff;
+    border-left: 5px solid #055a8e;
+    border-bottom: 5px solid #055a8e;
+  }
+  .columns-slideOut.columns-slideOut-open .columns-slideOut-close-btn {
+    background: #055a8e;
+    border-bottom: 1px solid #f9f9f9;
+    color: #fffeff;
+  }
+}

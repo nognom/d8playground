@@ -1,0 +1,200 @@
+{#
+/**
+
+ */
+#}
+<div id="page-wrapper" style="{{ page_wrapper_style }}">
+  <div id="page"{% if page_style %} style="{{ page_style }}"{% endif %}>
+    <header id="header" role="banner" style="{{ header_style }}" aria-label="{{ 'Site header'|t}}">
+      <div class="section clearfix">
+        <div id="header-watermark"{% if header_watermark_style %} style="{{ header_watermark_style }}" {% endif %} class="columns-wrapper">
+          <div class="clearfix columns-100">
+            {{ page.header }} {{ page.primary_menu }}
+            <div class="clearfix"></div>
+          </div> <!-- /.section -->
+        </div> <!-- /#header-watermark -->
+      </div>
+    </header> <!-- /#header -->
+
+    <div class="clearfix cfie"></div>
+
+
+    <div class="columns-wrapper">
+      <!-- messages -->
+      <div class="column columns-100">
+        {% if page.highlighted %}
+          {{ page.highlighted }}
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- space between menus and contents -->
+    <div class="clearfix"></div>
+
+    <div id="main-wrapper">
+    <div id="main" class="clearfix"
+      {%  if main_style %}
+        style="{{ main_style }}"
+        {% endif %}>
+
+      {% if page.banner_top %}
+      <div id="banner-top" class="banner clearfix">{{ page.banner_top }}</div>
+      <div class="spacer clearfix cfie"></div>
+      {% endif %}
+
+
+     {% if page.top_column_first or page.top_column_second or
+              page.top_column_third or page.top_column_fourth %}
+      <div id="top-wrapper" class="columns-wrapper">
+        <div id="top-columns" class="clearfix">
+          <div class="column-blocks clearfix">
+                <!--column-blocks -->
+                {% if page.top_column_first %}
+                  <div class="column-block-wrapper clearfix" style="width: {{ top_columns_width }}">
+                    <div class="column-block clearfix" style="{{ column_first }}">
+                      {{ page.top_column_first }}
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if page.top_column_second %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ top_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_between }}">
+                        {{ page.top_column_second }}
+                      </div>
+                    </div>
+                {% endif %}
+
+                {% if page.top_column_third %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ top_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_between }}">
+                        {{ page.top_column_third }}
+                      </div>
+                    </div>
+                {% endif %}
+
+                {% if page.top_column_fourth %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ top_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_last }}">
+                        {{ page.top_column_fourth }}
+                      </div>
+                    </div>
+                {% endif %}
+          </div>  <!--/.column-blocks -->
+          <div class="spacer clearfix cfie"></div>
+        </div> <!--/#top-columns -->
+      </div> <!-- /#top-wrapper -->
+      {% endif %}
+
+
+      <div class="clearfix cfie"></div>
+
+      <div class="columns-wrapper">
+        <!-- main content -->
+        <main id="content" class="column columns-75-75-stayOut"><section class="section">
+
+        {% if page.sidebar-firstcrumb %}
+          <div id="breadcrumb">{{ page.breadcrumb }}</div>
+        {% endif %}
+
+        <a id="main-content"></a>
+        {{ title_prefix }}
+        {% if title %}<h1 class="title" id="page-title">{{ title }}</h1>{% endif %}
+        {{ title_suffix }}
+        {% if tabs %}
+          <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+            {{ tabs }}
+          </nav>
+        {% endif %}
+        {{ page.help }}
+        {% if action_links %}<ul class="action-links">{{ action_links }}</ul>{% endif %}
+        {{ page.content }}
+
+
+      </section></main> <!-- /.section, /#content -->
+
+        {% if (page.sidebar_second) %}
+          <div id="sidebar-second" class="column sidebar columns-25-25-slideOut columns-slideOut"><div class="section">
+            {{ page.sidebar_second }}
+          </div></div> <!-- /.section, /#sidebar-second -->
+        {% endif %}
+      </div>
+
+
+      <div class="clearfix cfie"></div>
+
+     {% if page.bottom_column_first or page.bottom_column_second or
+              page.bottom_column_third or page.bottom_column_fourth %}
+      <div id="bottom-wrapper">
+        <div id="bottom-columns" class="clearfix">
+          <div class="column-blocks clearfix">
+                <!--column-blocks -->
+                {% if page.bottom_column_first %}
+                  <div class="column-block-wrapper clearfix" style="width: {{ bottom_columns_width }}">
+                    <div class="column-block clearfix" style="{{ column_first }}">
+                      {{ page.bottom_column_first }}
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if page.bottom_column_second %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ bottom_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_between }}">
+                        {{ page.bottom_column_second }}
+                      </div>
+                    </div>
+                {% endif %}
+
+                {% if page.bottom_column_third %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ bottom_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_between }}">
+                        {{ page.bottom_column_third }}
+                      </div>
+                    </div>
+                {% endif %}
+
+                {% if page.bottom_column_fourth %}
+                    <div class="column-block-wrapper clearfix" style="width: {{ bottom_columns_width }}">
+                      <div class="column-block clearfix" style="{{ column_last }}">
+                        {{ page.bottom_column_fourth }}
+                      </div>
+                    </div>
+                {% endif %}
+          </div>  <!--/.column-blocks -->
+          <div class="spacer clearfix cfie"></div>
+
+
+        </div> <!--/#bottom-columns -->
+      </div> <!-- /#bottom-wrapper -->
+      {% endif %}
+
+      <div class="clearfix cfie"></div>
+
+
+      {% if page.banner_bottom %}
+      <div id="spacer" class="clearfix cfie"></div>
+      <div id="banner-bottom" class="banner clearfix">{{ page.banner_bottom }}</div>
+      {% endif %}
+
+    </div> <!-- /#main -->
+    </div> <!-- /#main-wrapper -->
+
+    <!-- space between contents and footer -->
+    <div id="spacer" class="clearfix cfie"></div>
+
+    <div id="footer-wrapper">
+
+
+      {% if page.footer %}
+      <div id="footer" class="columns-wrapper"><div class="section columns-100">
+        {{ page.footer }}
+      </div>
+      <div class="clearfix"></div>
+      </div> <!-- /.section, /#footer -->
+      {% endif %}
+
+    </div> <!-- /#footer-wrapper -->
+
+
+  </div> <!-- /#page -->
+</div> <!-- /#page-wrapper -->

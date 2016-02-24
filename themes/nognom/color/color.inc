@@ -23,7 +23,7 @@ $info = array(
   // Pre-defined color schemes.
   'schemes' => array(
     'default' => array(
-      'title' => t('Blue Lagoon (default)'),
+      'title' => t('Nognom (default)'),
       'colors' => array(
         'top' => '#055a8e',
         'bottom' => '#1d84c3',
@@ -35,11 +35,11 @@ $info = array(
         'titleslogan' => '#fffeff',
         'text' => '#3b3b3b',
         'link' => '#0071B3',
-        'linkhover' => '#5b272b',
+        'linkhover' => '#023b5c',
       ),
     ),
     'firehouse' => array(
-      'title' => t('Nognom'),
+      'title' => t('Reds'),
       'colors' => array(
         'top' => '#cd2d2d',
         'bottom' => '#d64e4e',
@@ -54,20 +54,20 @@ $info = array(
         'linkhover' => '#5b272b',
       ),
     ),
-    'ice' => array(
+    'evs' => array(
       'title' => t('EVS'),
       'colors' => array(
-        'top' => '#d0d0d0',
-        'bottom' => '#c2c4c5',
+        'top' => '#d6c970',
+        'bottom' => '#4f4a29',
         'bg' => '#ffffff',
         'sidebar' => '#ffffff',
-        'sidebarborders' => '#cccccc',
-        'footer' => '#016b83',
-        'footertext' => '#3b3b3b',
-        'titleslogan' => '#000000',
-        'text' => '#4a4a4a',
-        'link' => '#019dbf',
-        'linkhover' => '#5b272b',
+        'sidebarborders' => '#897f48',
+        'footer' => '#3f300e',
+        'footertext' => '#ffffff',
+        'titleslogan' => '#ffffff',
+        'text' => '#3b3b3b',
+        'link' => '#0071B3',
+        'linkhover' => '#023b5c',
       ),
     ),
   ),

@@ -185,6 +185,20 @@ p{
 /* END -- Footer */
 
 
+/* START - Display Suite */
+.view-mode-teaser.ds-2col-fluid .group-left {
+width: 20%;
+box-sizing: border-box;
+padding-right: 20px;
+}
+.view-mode-teaser.ds-2col-fluid .group-left IMG {
+  width: 100%;
+  height: auto;
+}
+.view-mode-teaser.ds-2col-fluid .group-right {
+  width:80%;
+}
+/* END - Display Suite */
 
 
 @media only screen and (max-width:730px) {
